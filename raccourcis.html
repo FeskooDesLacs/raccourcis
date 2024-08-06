@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Métadonnées -->
+    <meta name="description" content="Vos raccourcis tous réunis.">
+    <meta name="keywords" content="Raccourcis, shortcuts.">
+    <meta name="author" content="Raphaël.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Icones/raccourcis_ico.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/488aef7191.js" crossorigin="anonymous"></script>
+    <title>Raccourcis utiles !</title>
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <ul class="left">
+            <!-- Raccourcis -->
+            <li><a>Raccourcis</a></li>
+        </ul>
+        <ul class="right">
+            <li class="theme-selector-container">
+                <!-- Option pour changement de thème -->
+                <button onclick="toggleThemeSelector()">Thème</button>
+                <select id="theme-selector" class="theme-selector">
+                    <option value="light">Clair</option>
+                    <option value="dark">Sombre</option>
+                    <option value="modern">Moderne</option>
+                    <option value="naval">Naval</option>
+                    <option value="jungle">Jungle</option>
+                    <option value="soleil">Soleil</option>
+                    <option value="france">France</option>
+                    <option value="rose">Barbie</option>
+                    <option value="beach">Plage</option>
+                    <option value="pine">Sapin</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+    <!-- Bouton connexion nécessaire -->
+    <button id="showAlert">⚠️</button>
+    <div id="customAlert" class="alert">
+        <div class="alert-content">
+            <span class="close-btn" id="closeAlert">&times;</span>
+            <p>Cette page nécessite une connexion internet.</p>
+        </div>
+    </div>
+    <!-- Temps  -->
+    <div class="container">
+        <div id="datetime" class="datetime"></div>
+        <!-- Section Multimédias -->
+        <div class="category">
+            <h2>Multimédias</h2>
+            <div class="shortcuts">
+                <div class="shortcut">
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://www.spotify.com/" target="_blank">
+                        <i class="fab fa-spotify"></i>
+                        <span>Spotify</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://www.deezer.com/fr/" target="_blank">
+                        <i class="fab fa-deezer"></i>
+                        <span>Deezer</span>
+                    </a>
+                </div>
+		 <div class="shortcut">
+                    <a href="https://www.primevideo.com/" target="_blank">
+                        <i class="fa-solid fa-film shortcut-icon"></i>
+                        <span>Prime Video</span>
+                    </a>
+                </div>	
+                <div class="shortcut">
+                    <a href="https://www.netflix.com/" target="_blank">
+                        <i class="fa-solid fa-film shortcut-icon"></i>
+                        <span>Netflix</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://www.disneyplus.com/" target="_blank">
+                        <i class="fa-solid fa-film"></i>
+                        <span>Disney+</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://www.ocs.fr/" target="_blank">
+                        <i class="fas fa-film"></i>
+                        <span>OCS</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section Organisation -->
+        <div class="category">
+            <h2>Organisation</h2>
+            <div class="shortcuts">
+                <div class="shortcut">
+                    <a href="https://drive.google.com/drive/my-drive" target="_blank">
+                        <i class="fab fa-google-drive"></i>
+                        <span>Google Drive</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://keep.google.com/u/0/#home" target="_blank">
+                        <i class="fa-solid fa-clipboard"></i>
+                        <span>Google Notes</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://calendar.google.com/calendar/u/0/r?pli=1" target="_blank">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Google Agenda</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://mail.google.com/mail/" target="_blank">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>Gmail</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://ent.univ-lorraine.fr/#Tous" target="_blank">
+                        <i class="fa-solid fa-book"></i>
+                        <span>Univ-Lorraine</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://www.sncf-connect.com" target="_blank">
+                        <i class="fa-solid fa-train"></i>
+                        <span>SNCF Connect</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://www.lemet.fr" target="_blank">
+                        <i class="fa-solid fa-bus"></i>
+                        <span>MET'</span>
+                    </a>
+                </div>
+            </div>            
+        </div>
+
+        <!-- Section Développement -->
+        <div class="category">
+            <h2>Développement</h2>
+            <div class="shortcuts">
+                <div class="shortcut">
+                    <a href="https://chat.openai.com" target="_blank">
+                        <i class="fas fa-robot"></i>
+                        <span>ChatGPT</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://htmlcolorcodes.com/fr/" target="_blank">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Codes Couleurs</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://www.reddit.com" target="_blank">
+                        <i class="fab fa-reddit"></i>
+                        <span>Reddit</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://daily.dev/fr-fr" target="_blank">
+                        <i class="fa-solid fa-code"></i>
+                        <span>DailyDev</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://downdetector.fr/" target="_blank">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Down Detector</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://whatismyipaddress.com" target="_blank">
+                        <i class="fas fa-network-wired"></i>
+                        <span>What'sMyIP</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://github.com" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>Github</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Section Réseaux sociaux -->
+        <div class="category">
+            <h2>Réseaux sociaux</h2>
+            <div class="shortcuts">
+                <div class="shortcut">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <span>Insta</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://www.snapchat.com/fr-FR" target="_blank">
+                        <i class="fab fa-snapchat-ghost"></i>
+                        <span>Snap</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://web.whatsapp.com/" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Whatsapp</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://x.com/?lang=fr" target="_blank">
+                        <i class="fab fa-x-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://www.facebook.com/?locale=fr_FR" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://www.messenger.com/" target="_blank">
+                        <i class="fab fa-facebook-messenger"></i>
+                        <span>Messenger</span>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <a href="https://discord.com/" target="_blank">
+                        <i class="fa-brands fa-discord"></i>
+                        <span>Discord</span>
+                    </a>
+                </div>
+            </div>            
+        </div>
+    </div>
+    <!-- Lien au fichier JS -->
+    <script src="raccourcis.js"></script>
+</body>
+</html>
